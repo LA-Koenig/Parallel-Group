@@ -13,6 +13,14 @@ using namespace std;
 double* Tri(int n, double* a, double* d, double* c, double* b);
 double L2Error(double* exact, double* calc);
 double LInferror3D(double* exact, double* calc);
+double** makeA(int nx, int ny, int a=-4, int b=1, int d=1);
+
+//Methods
+double*** crankNicolson(double h, double k, double nx, double ny, double m, double** initVal, double alpha=1);
+double*** backwardDifference(double h, double k, double nx, double ny, double m, double** initVal, double alpha=1);
+double*** extrapolation(double h, double k, double nx, double ny, double m, double** initVal, double alpha=1);
+double*** peacemanRachford(double h, double k, double nx, double ny, double m, double** initVal, double alpha=1);
+
 
 
 int main(int argc, char* argv[]){
